@@ -64,6 +64,7 @@
 {{- $class = "post-entry tag-entry" }}
 {{- end }}
 
+{{- if not (page.Params.hideList) }}
 <article class="{{ $class }}">
   {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
   {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}
@@ -115,6 +116,8 @@
     {{- end }}
   </nav>
 </footer>
+{{- end }}
+
 {{- end }}
 
 {{- end }}{{/* end profileMode */}}
