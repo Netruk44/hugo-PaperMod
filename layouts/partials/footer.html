@@ -47,7 +47,7 @@
             var id = this.getAttribute("href").substr(1);
             if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
                 document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
+                    //behavior: "smooth"
                 });
             } else {
                 document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
